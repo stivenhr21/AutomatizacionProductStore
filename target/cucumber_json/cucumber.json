@@ -1,0 +1,83 @@
+[
+  {
+    "line": 4,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 45034800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginStepdefinitions.initialConfiguration()"
+            }
+          }
+        ],
+        "line": 18,
+        "name": "Inicio de sesion exitoso en ProductStore",
+        "description": "",
+        "id": "inicio-de-sesion-exitoso-en-el-sitio-web-productstore;inicio-de-sesion-exitoso-en-productstore;;2",
+        "type": "scenario",
+        "keyword": "Esquema del escenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4841976200,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "que nos encontramos en la pagina principal de ProductStore",
+            "match": {
+              "location": "LoginStepdefinitions.queNosEncontramosEnLaPaginaPrincipalDeProductStore()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 7004336800,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "nos autentificamos con nuestras credenciales",
+            "match": {
+              "location": "LoginStepdefinitions.nosAutentificamosConNuestrasCredenciales(String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "stivenhrstiven@gmail.com",
+                  "STIVENc1qyay492121"
+                ]
+              }
+            ],
+            "keyword": "Y "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@E2E_QaPrueba2"
+          },
+          {
+            "name": "@TestCase1"
+          }
+        ]
+      }
+    ],
+    "name": "Inicio de sesion exitoso en el sitio web ProductStore",
+    "description": "  El usuario debe tener la habilidad de iniciar sesion",
+    "id": "inicio-de-sesion-exitoso-en-el-sitio-web-productstore",
+    "keyword": "Característica",
+    "uri": "src/test/resources/productstore/features/productstore/productstore.feature",
+    "tags": [
+      {
+        "name": "@E2E_QaPrueba2",
+        "type": "Tag",
+        "location": {
+          "line": 3,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

@@ -1,19 +1,54 @@
-plugins {
-    id 'java'
-}
-
-group 'org.example'
+group 'co.com.stivenhernandez.productstore'
 version '1.0-SNAPSHOT'
 
-repositories {
-    mavenCentral()
-}
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'net.serenity-bdd.aggregator'
 
-dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
-}
+description = 'Automatizacion ProductStore'
 
-test {
-    useJUnitPlatform()
-}
+
+repositories
+        {
+            jcenter()
+            mavenLocal()
+            mavenCentral()
+        }
+
+buildscript
+
+        {
+            repositories
+                    {
+                        jcenter()
+                        mavenLocal()
+                        mavenCentral()
+                    }
+
+            dependencies
+                    {
+                        classpath("net.serenity-bdd:serenity-gradle-plugin:1.9.9")
+                    }
+        }
+
+dependencies
+        {
+            implementation "org.apache.logging.log4j:log4j-core:2.11.2"
+            implementation "com.codoid.products:fillo:1.18"
+            implementation "com.hynnet:jacob:1.18"
+            implementation "net.sf.jt400:jt400-full:6.0"
+            implementation "org.jvnet.com4j:com4j:2.1"
+            implementation "org.slf4j:slf4j-simple:1.6.1"
+            implementation "org.codehaus.groovy:groovy-all:2.4.11"
+
+            implementation "net.serenity-bdd:serenity-junit:1.9.9"
+            implementation "net.serenity-bdd:serenity-rest-assured:1.9.9"
+            implementation "net.serenity-bdd:serenity-screenplay-rest:1.9.20"
+            implementation "net.serenity-bdd:serenity-core:1.9.9"
+            implementation "net.serenity-bdd:serenity-cucumber:1.9.5"
+
+            testImplementation "org.assertj:assertj-core:3.9.0"
+            testImplementation "org.hamcrest:hamcrest-core:1.3"
+        }
+
+gradle.startParameter.continueOnFailure = true
